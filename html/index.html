@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home Page</title>
+</head>
+<body>
+<center>
+<select id="locale_select">
+  <option value="en" selected>en</option>
+  <option value="zh">zh</option>
+  <option value="zhtw">zhtw</option>
+  <option value="ja">ja</option>
+</select>
+<button id="update_locale">Update locale</button>
+</center>
+<script type="text/javascript">
+window.onload = function() {
+  document.getElementById("update_locale")
+    .addEventListener("click", ()=>{
+      const locale = document.getElementById("locale_select").value
+      window.__TAURI__.tauri.invoke("update_locale", {locale})
+    });
+};
+
+</script>
+</body>
+</html>
