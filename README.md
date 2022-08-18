@@ -1,6 +1,6 @@
-# tauri-tray-icon-animation
+# tauri-tray-menu
 
-minimal example of tauri tray icon animation.
+minimal example of tauri tray menu.
 
 ## run
 
